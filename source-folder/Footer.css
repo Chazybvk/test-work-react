@@ -1,0 +1,196 @@
+/* Основные стили для футера */
+.footer {
+  display: flex;
+  max-width: 1628px;
+  max-height: 870px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Левый блок */
+.left-block {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 406px);
+  margin-top: 93px;
+  margin-left: 318px;
+  gap: 97px;
+}
+
+/* Колонка */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 203px;
+}
+
+/* Заголовок колонки */
+.column h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #d3c8bb;
+  padding-bottom: 20px;
+}
+
+/* Раздел */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  margin-bottom: 10px;
+}
+
+.section h5 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.8px;
+  margin-bottom: 5px;
+}
+
+/* Пункты */
+.section ul {
+  list-style: none;
+  padding: 0 0 0 14px;
+  margin: 0;
+}
+
+.section ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.19px;
+  color: #aa927a;
+  margin-bottom: 5px;
+}
+
+/* Правый блок */
+.right-block {
+  width: 406px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 87px;
+}
+
+/* Карта */
+.map {
+  width: 100%;
+  height: 200px;
+  background-color: #ccc; /* Заглушка для карты */
+  border-radius: 4px;
+}
+
+/* Телефон */
+.phone {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Email */
+.email {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25.24px;
+}
+
+/* Кнопка "Оставить заявку" */
+.request-button {
+  width: 249px;
+  height: 61px;
+  color: #ffffff;
+  background: #b21f24;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 16.8px;
+  clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.section-special {
+  padding: 0 !important;
+}
+
+.request-button:hover {
+  background-color: #911a1e;
+}
+
+@media screen and (max-width: 1664px) {
+  .left-block {
+    margin-left: 0px;
+  }
+  .footer {
+    padding: 0 36px;
+  }
+  .left-block {
+    gap: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 0 30px;
+    flex-direction: column;
+  }
+  .left-block {
+    margin-left: 0px;
+    gap: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .column {
+    width: 30%;
+    min-width: 150px;
+    max-width: 281px;
+  }
+  .right-block {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .map {
+    height: 50px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .left-block {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+  }
+  .footer {
+    padding: 0 12px;
+  }
+  .right-block {
+    flex-direction: column;
+  }
+  .map {
+    width: 100%;
+    height: 75px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .request-button {
+    width: 195px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,239 @@
+header,
+header * {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+header {
+  position: fixed;
+  height: 53px;
+  background: #614d49;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+}
+
+header * {
+  position: relative;
+}
+
+.wrapper-of-header {
+  width: clamp(375px, 100%, 1628px);
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.logo-section {
+  min-width: 130px;
+  max-width: 317px;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+}
+
+.wrapper-of-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 99%;
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+}
+
+/* Стили для navigation */
+.navigation {
+  display: flex;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
+  color: #ffffff;
+  clip-path: polygon(
+    15px 0,
+    /* Скошенный левый верхний угол */ 100% 0,
+    /* Правый верхний угол */ calc(100% - 15px) 100%,
+    /* Скошенный правый нижний угол */ 0 100% /* Левый нижний угол */
+  );
+  margin-left: -16px; /* Перекрываем скошенный край */
+  transition: background-color 0.3s ease;
+  width: clamp(175px, 100%, 190px);
+  padding: 0 0 0 48px;
+}
+
+.nav-item:hover {
+  background-color: #e8e1e0;
+  color: #7c6e6b;
+}
+.header-left-side-content {
+  max-width: 839px;
+  width: 100%;
+}
+
+/* Стили для header-right-side-content */
+.header-right-side-content {
+  display: flex;
+  align-items: center;
+  width: 398px;
+  justify-content: space-between;
+}
+
+/* Кнопка "Оставить заявку" */
+.request-button-header {
+  background-color: #311311;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 201px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.request-button-header:hover {
+  background-color: #4a1f1f;
+}
+
+/* Элемент "Контакты" */
+.contacts-link {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.contacts-link:hover {
+  color: #e8e1e0;
+}
+
+/* Иконка поиска */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+  color: #e8e1e0;
+}
+
+.search-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Выбор языка */
+.language-select {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.language-select:hover {
+  color: #e8e1e0;
+}
+
+.language-select option {
+  background-color: #614d49;
+  color: #ffffff;
+}
+/* Стили для dropdown-меню */
+.dropdown-menu {
+  position: absolute;
+  height: 53px;
+  top: 100%;
+  left: -31px;
+  width: 100vw; /* Растягиваем на всю ширину */
+  background-color: #e8e1e0; /* Цвет фона как у header */
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  clip-path: polygon(
+    15px 0,
+    /* Скошенный левый верхний угол */ 100% 0,
+    /* Правый верхний угол */ calc(100% - 15px) 100%,
+    /* Скошенный правый нижний угол */ 0 100% /* Левый нижний угол */
+  );
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #503d3a;
+
+  margin-left: -16px;
+  transition: background-color 0.3s ease;
+  width: clamp(175px, 100%, 210px);
+  padding: 22px 0 22px 52px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px 20px;
+  clip-path: polygon(
+    10px 0,
+    /* Скошенный левый верхний угол */ 100% 0,
+    /* Правый верхний угол */ calc(100% - 10px) 100%,
+    /* Скошенный правый нижний угол */ 0 100% /* Левый нижний угол */
+  );
+  min-width: 126px;
+}
+
+.dropdown-menu li:hover {
+  color: #7c6e6b;
+}
+.dropdown-menu li a:hover {
+  background-color: #b21f24;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1664px) {
+  .wrapper-of-header {
+    padding: 0 36px;
+  }
+  .wrapper-of-header::before {
+    right: 91%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper-of-header {
+    padding: 0 30px;
+  }
+  .nav-item {
+    width: clamp(100px, 100%, 150px);
+  }
+  .dropdown-menu li {
+    width: clamp(100px, 100%, 150px);
+  }
+}

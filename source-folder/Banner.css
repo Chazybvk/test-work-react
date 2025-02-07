@@ -1,0 +1,182 @@
+/* Основные стили для видео-баннера */
+.video-banner {
+  position: relative;
+  max-width: 1628px;
+  max-height: 860px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 107px auto 0 auto;
+  border-radius: 4px;
+}
+
+/* Стили для видео */
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Стили для мини-заголовка и текста, который будет отображаться при картинке */
+.image-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 67px 0 0 69px;
+  max-width: 584px;
+}
+
+.image-caption h3 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 39px;
+}
+
+.image-caption p {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* Блок с кнопкой "Связаться с нами" */
+.contact-block {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 396px; /* Фиксированная ширина */
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  clip-path: polygon(30px 0, 100% 0, 100% 100%, 0 100%);
+  transform: translate(2px, 2px);
+}
+
+/* Красная полоса */
+.red-strip {
+  height: 92px;
+  background-color: #b21f24;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Выравниваем по центру */
+}
+
+/* Белая полоса */
+.white-strip {
+  height: 36px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Кнопка "Связаться с нами" */
+.contact-button {
+  background-color: #b21f24;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Выравниваем текст и иконку по центру */
+  width: 100%; /* Занимает всю ширину red-strip */
+  height: 100%; /* Занимает всю высоту red-strip */
+  padding: 0 20px; /* Отступы слева и справа */
+}
+
+.contact-button-vector {
+  margin-left: 30px; /* Отступ иконки от текста */
+}
+
+.contact-button:hover {
+  background-color: #911a1e;
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 1664px) {
+  .wrapper-for-banner {
+    padding: 0 36px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper-for-banner {
+    padding: 0 30px;
+  }
+  .contact-block {
+    width: 230px !important;
+    height: 87px !important;
+  }
+  .contact-button {
+    font-size: 12px !important;
+  }
+  .contact-button-vector {
+    margin-left: 12px !important;
+  }
+  .video-banner {
+    max-height: 509px;
+    margin-top: 53px;
+  }
+  .image-caption h3 {
+    font-size: 47px;
+    line-height: 56.4px;
+    margin-bottom: 23px;
+  }
+  .image-caption p {
+    color: #7c6e6b;
+    font-size: 16px;
+    line-height: 20.19px;
+  }
+  .image-caption {
+    width: 360px;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .bigger-sub-section {
+    height: auto;
+  }
+  .wrapper-for-banner {
+    padding: 0;
+  }
+  .white-strip {
+    display: none !important;
+  }
+  .video {
+    height: 640px;
+    width: auto;
+  }
+  .contact-block {
+    width: 183px !important;
+    height: 44px !important;
+    font-size: 12px;
+    clip-path: polygon(
+      15px 0,
+      /* Скошенный левый верхний угол */ 100% 0,
+      /* Правый верхний угол (остается прямым) */ 100% 100%,
+      /* Правый нижний угол (остается прямым) */ 0 100% /* Левый нижний угол */
+    ) !important;
+  }
+  .image-caption h3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .image-caption p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .image-caption {
+    width: 100%;
+    padding-top: 61px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
