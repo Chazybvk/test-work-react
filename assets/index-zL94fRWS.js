@@ -9815,6 +9815,7 @@ const Af = ({ onOpenForm: _ }) => {
             mediaSrc: './stock-video.mp4',
             isVideo: !0,
             onOpenForm: () => M(!0),
+            playsinline
           }),
           c.jsx(Bf, { onOpenForm: () => M(!0) }),
           c.jsx(Ma, {
