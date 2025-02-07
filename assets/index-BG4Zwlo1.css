@@ -43,6 +43,7 @@ input,
 button,
 textarea {
   font-family: inherit;
+  appearance: none;
 }
 input::-ms-clear {
   display: none;
