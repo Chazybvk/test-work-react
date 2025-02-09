@@ -497,6 +497,10 @@ header * {
   margin-top: 89px;
   gap: 20px;
 }
+.form-text{
+  font-size:20px;
+  margin-bottom:40px;
+}
 .sub-section {
   position: relative;
   overflow: hidden;
@@ -939,9 +943,10 @@ header * {
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px #0000001a;
-  margin: 15px;
+  margin: 25px;
   position: relative;
   animation: slideIn 0.3s ease;
+  overflow: scroll;
 }
 @keyframes fadeIn {
   0% {
