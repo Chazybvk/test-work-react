@@ -4,8 +4,8 @@ window.addEventListener("load", function() {
     const source = document.getElementsByTagName("source")[0];
 
     // Устанавливаем атрибут playsinline для корректного отображения на iPhone
-    video.setAttribute("playsinline", "true");
-    video.setAttribute("muted", "true");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
     function updateSource() {
         if (window.innerWidth <= 530) {
             source.setAttribute("src", "./stock-video-mobile.mp4");
