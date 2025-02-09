@@ -9,7 +9,7 @@ function checkScreenWidth() {
   if (!video.hasAttribute('playsinline')) {
     video.setAttribute('playsinline', ''); // Добавляем атрибут playsinline
   }
-
+/*
   // Меняем атрибут src у элемента source в зависимости от ширины экрана
   if (currentWidth > 530) {
     source.setAttribute('src', './stock-video.mp4');
@@ -31,6 +31,7 @@ function checkScreenWidth() {
   // Обновляем сохраненную ширину
   lastWidth = currentWidth;
 }
+*/
 
 // Инициализация функции при загрузке страницы
 window.onload = checkScreenWidth;
