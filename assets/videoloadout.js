@@ -9,7 +9,7 @@ function checkScreenWidth() {
     video.setAttribute('playsinline', ''); // Добавляем атрибут playsinline
   }
 
-  // Проверка на изменение через 530px
+  // Выполняем действия только при переходе через 530px
   if ((lastWidth <= 530 && currentWidth > 530) || (lastWidth > 530 && currentWidth <= 530)) {
     video.pause();
     video.load();
