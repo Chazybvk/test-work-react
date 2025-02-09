@@ -1,12 +1,10 @@
 function checkScreenWidth() {
   var video = document.getElementsByTagName("video")[0];
-  
-  // Проверка ширины экрана
-  if (window.innerWidth <= 530 || window.innerWidth > 530) {
-    video.pause();
-    video.load();
-    video.play();
-  }
+
+  // Перезагружаем видео при любом изменении ширины окна
+  video.pause();
+  video.load();
+  video.play();
 }
 
 // Инициализация функции при загрузке страницы
