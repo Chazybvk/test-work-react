@@ -17,9 +17,23 @@ window.addEventListener("load", function() {
         video.load();
     }
 
+    // Флаг для отслеживания времени между событиями resize
+    let resizeTimeout;
+
+    // Функция для обработки изменения размера окна с задержкой
+    function handleResize() {
+        // Если resize уже был запланирован, отменяем его
+        if (resizeTimeout) {
+            clearTimeout(resizeTimeout);
+        }
+        
+        // Планируем выполнение функции updateSource через 1 секунду (1000 миллисекунд)
+        resizeTimeout = setTimeout(updateSource, 1000);
+    }
+
     // Изменяем src при загрузке страницы
     updateSource();
 
-    // Изменяем src при изменении размера окна
-    window.addEventListener("resize", updateSource);
+    // Изменяем src при изменении размера окна с задержкой
+    window.addEventListener("resize", handleResize);
 });
