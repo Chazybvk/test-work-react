@@ -560,7 +560,6 @@ header * {
   transform: translate(-2px, 2px);
 }
 .red-strip {
-  height: 92px;
   background-color: #b21f24;
   display: flex;
   justify-content: center;
