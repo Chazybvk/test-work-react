@@ -9812,7 +9812,7 @@ const Af = ({ onOpenForm: _ }) => {
         children: [
           c.jsx(Af, { onOpenForm: () => M(!0) }),
           c.jsx(Ma, {
-            mediaSrc: './stock-video.mp4',
+            mediaSrc: '',
             isVideo: !0,
             onOpenForm: () => M(!0),
           }),
