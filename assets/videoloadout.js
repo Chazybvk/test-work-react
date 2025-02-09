@@ -10,23 +10,23 @@ function checkScreenWidth() {
     video.setAttribute('playsinline', ''); // Добавляем атрибут playsinline
   }
 
+  // Меняем атрибут src у элемента source в зависимости от ширины экрана
+  if (currentWidth > 530) {
+    source.setAttribute('src', './stock-video.mp4');
+  } else {
+    source.setAttribute('src', './stock-video-mobile.mp4');
+  }
+
   // Выполняем действия только при переходе через 530px
   if ((lastWidth <= 530 && currentWidth > 530) || (lastWidth > 530 && currentWidth <= 530)) {
     video.pause();
     video.load();
     video.play();
-
-    // Меняем атрибут src у элемента source в зависимости от ширины экрана
-    if (currentWidth > 530) {
-      source.setAttribute('src', './stock-video.mp4');
-    } else {
-      source.setAttribute('src', './stock-video-mobile.mp4');
-    }
-
-    // Перезагружаем видео с новым источником
-    video.load();
-    video.play();
   }
+
+  // Перезагружаем видео с новым источником после изменения
+  video.load();
+  video.play();
 
   // Обновляем сохраненную ширину
   lastWidth = currentWidth;
