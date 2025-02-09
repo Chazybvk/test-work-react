@@ -1,10 +1,18 @@
+let lastWidth = window.innerWidth; // Сохраняем последнюю ширину экрана
+
 function checkScreenWidth() {
   var video = document.getElementsByTagName("video")[0];
+  var currentWidth = window.innerWidth;
 
-  // Перезагружаем видео при любом изменении ширины окна
-  video.pause();
-  video.load();
-  video.play();
+  // Выполняем действия только при переходе через 530px
+  if ((lastWidth <= 530 && currentWidth > 530) || (lastWidth > 530 && currentWidth <= 530)) {
+    video.pause();
+    video.load();
+    video.play();
+  }
+
+  // Обновляем сохраненную ширину
+  lastWidth = currentWidth;
 }
 
 // Инициализация функции при загрузке страницы
