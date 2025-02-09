@@ -1055,3 +1055,24 @@ header * {
   background-color: #cfcfcf;
   cursor: not-allowed;
 }
+
+ @media screen and (max-width: 530px) {
+  .file-input-label{
+    font-size:12px;
+  }
+  input{
+    margin-bottom: 10px;
+    height: 25px;
+  }
+  .request-form {
+    padding:15px;
+    max-height:95%;
+  }
+  .form-text p{
+    font-size:12px;
+    margin-bottom: 10px;
+  }
+  .privacy-policy{
+    font-size:12px;
+}
+ }
