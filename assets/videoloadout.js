@@ -4,6 +4,10 @@ function checkScreenWidth() {
   var video = document.getElementsByTagName("video")[0];
   var currentWidth = window.innerWidth;
 
+  if (!video.hasAttribute('playsinline')) {
+    video.setAttribute('playsinline', '');
+  }
+
   // Выполняем действия только при переходе через 530px
   if ((lastWidth <= 530 && currentWidth > 530) || (lastWidth > 530 && currentWidth <= 530)) {
     video.pause();
