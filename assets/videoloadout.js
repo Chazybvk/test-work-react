@@ -4,11 +4,12 @@ function checkScreenWidth() {
   var video = document.getElementsByTagName("video")[0];
   var currentWidth = window.innerWidth;
 
+  // Добавляем атрибут playsinline только при первой загрузке страницы
   if (!video.hasAttribute('playsinline')) {
-    video.setAttribute('playsinline', '');
+    video.setAttribute('playsinline', ''); // Добавляем атрибут playsinline
   }
 
-  // Выполняем действия только при переходе через 530px
+  // Проверка на изменение через 530px
   if ((lastWidth <= 530 && currentWidth > 530) || (lastWidth > 530 && currentWidth <= 530)) {
     video.pause();
     video.load();
